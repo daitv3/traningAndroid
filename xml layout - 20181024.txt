@@ -1,0 +1,13 @@
+XML layout:
+
+layout: 3 loại.
+	+ frameLayout
+	+ relativeLayout
+	+ linearlayout :layout theo đương dọc/ngang
+	
+
+đơn vị: 
+	px, dp: cứng
+	wrap-content: bọc lấy nội dung
+	match-parent: vừa theo parent 
+	

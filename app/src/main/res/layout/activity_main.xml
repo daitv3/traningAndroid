@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <TextView
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="12dp"
+        tools:context=".MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_danh_sach"
+            android:layout_width="184dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Danh sách"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ListView
+            android:id="@+id/lv_list_danh_sach"
+            android:layout_width="368dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="61dp" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+        </View>
+
+        <Button
+            android:id="@+id/btn_them"
+            android:layout_width="108dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:text="Thêm"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="481dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>

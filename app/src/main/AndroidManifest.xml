@@ -10,12 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".ThemMoiActivity"/>
+        <activity android:name=".listView.ListViewDemo">
+
+
+        </activity>
+
+        <activity android:name=".listView.ContentViewDemo"/>
+        <activity android:name=".recyclerviews.ListRecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".recyclerviews.AddNewItem"/>
     </application>
 
 </manifest>
