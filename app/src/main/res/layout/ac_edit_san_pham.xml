@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Product Name"/>
+            <EditText
+                android:id="@+id/edt_prd_name_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Product Price"/>
+            <EditText
+                android:id="@+id/edt_prd_price_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_them_prd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ADD"/>
+
+    </LinearLayout>
+</LinearLayout>

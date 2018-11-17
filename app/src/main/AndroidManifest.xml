@@ -20,14 +20,19 @@
 
         <activity android:name=".listView.ContentViewDemo"/>
         <activity android:name=".recyclerviews.ListRecyclerViewActivity">
+
+
+        </activity>
+        <activity android:name=".recyclerviews.AddNewItem"/>
+
+        <activity android:name=".kiemtra.ListSanPhamActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".recyclerviews.AddNewItem"/>
+        <activity android:name=".kiemtra.EditSanPham"/>
     </application>
 
 </manifest>
