@@ -2,13 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.traning">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <activity android:name=".MainActivity">
 
         </activity>
@@ -26,13 +28,93 @@
         <activity android:name=".recyclerviews.AddNewItem"/>
 
         <activity android:name=".kiemtra.ListSanPhamActivity">
+
+        </activity>
+        <activity android:name=".kiemtra.EditSanPham"/>
+        <activity android:name=".fragment.MainFragmentActivity">
+
+        </activity>
+        <activity android:name=".fragment.MainFragmentDay2Activity">
+
+        </activity>
+        <activity android:name=".preference.MainDemoActivity">
+
+        </activity>
+
+
+
+        <activity android:name=".serviceDemo.MainActivityDemoUnboundService">
+
+        </activity>
+        <service android:name=".serviceDemo.DemoUnboundSercive">
+
+        </service>
+
+        <activity android:name=".serviceDemo.MainActivityBoundService">
+
+        </activity>
+        <service android:name=".serviceDemo.DemoBoundService"></service>
+
+        <activity android:name=".multithead.asynctask.MainActivityAsyncTask">
+
+        </activity>
+        <activity android:name=".multithead.intentservice.MainActivityIntentServive">
+
+        </activity>
+        <service android:name=".multithead.intentservice.MyIntentService"/>
+        <receiver android:name=".multithead.intentservice.MainActivityIntentServive" />
+
+
+        <activity android:name=".broadcastRecevier.MainAcBroadcast">
+
+
+        </activity>
+        <receiver android:name=".broadcastRecevier.MyBroadcastCall" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <!--lib picasso-->
+        <activity android:name=".liblary.MainAcvityLibPicasso">
+
+
+        </activity>
+        <!--end-->
+
+        <!--call api produce-->
+        <activity android:name=".examCallApi.MainExamCallApiProduct">
+
+
+        </activity>
+        <!--end-->
+        <!--salon-->
+        <activity android:name=".salon.MainAcSalonHome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".kiemtra.EditSanPham"/>
+        <activity android:name=".salon.MainDetailSalon">
+
+        </activity>
+        <!--end-->
     </application>
+
+    <permission android:name="android.permission.INTERNET"></permission>
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
 
 </manifest>
