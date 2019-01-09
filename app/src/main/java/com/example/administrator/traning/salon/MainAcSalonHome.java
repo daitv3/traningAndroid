@@ -30,7 +30,10 @@ public class MainAcSalonHome extends AppCompatActivity implements ListItemSalon.
         /*ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_launcher_background);*/
-        getDataSalon();
+        if(getIntent() != null){
+            getDataSalon();
+        }
+       // getDataSalon();
 
     }
 
@@ -56,6 +59,9 @@ public class MainAcSalonHome extends AppCompatActivity implements ListItemSalon.
             }
         });
     }
+
+
+
 
 
 

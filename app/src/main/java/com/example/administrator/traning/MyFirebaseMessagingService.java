@@ -1,23 +1,31 @@
 package com.example.administrator.traning;
 
-import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends Activity {
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    private static final String TAG = "FCM Service";
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        // TODO: Handle FCM messages here.
+        // If the application is in the foreground handle both data and notification messages here.
+        // Also if you intend on generating your own notifications as a result of a received FCM
+        // message, here is where that should be initiated.
+        Log.d(TAG, "From: " + remoteMessage.getFrom());
+        Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
+        notify(remoteMessage.getNotification().getBody());
     }
 
-    public void notify(View v){
+
+    public void notify(String content){
         int NOTIFICATION_ID = 234;
 
         NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
@@ -35,14 +43,14 @@ public class MainActivity extends Activity {
             mChannel.setLightColor(Color.RED);
             mChannel.enableVibration(true);
 
-            mChannel.setShowBadge(true);
+            mChannel.setShowBadge(false);
             notificationManager.createNotificationChannel(mChannel);
         }
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.mipmap.ic_launcher)
-               .setContentTitle("hello")
-               .setContentText("hihihi");
+                .setContentTitle("hello")
+                .setContentText(content);
 
         notificationManager.notify(NOTIFICATION_ID, builder.build());
     }

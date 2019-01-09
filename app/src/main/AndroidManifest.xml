@@ -10,11 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        >
-        <activity android:name=".MainActivity">
 
+        >
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".ThemMoiActivity"/>
         <activity android:name=".listView.ListViewDemo">
 
 
@@ -93,17 +98,51 @@
         <!--end-->
         <!--salon-->
         <activity android:name=".salon.MainAcSalonHome">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".salon.MainDetailSalon">
 
         </activity>
+        <activity android:name=".salon.MainLoginSalon">
+
+        </activity>
+        <activity android:name=".salon.MainAcRegisterUserSalon"/>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
         <!--end-->
+        <!--api google map-->
+      <!--  <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyASkFKAlIHOGCMs79LYh0-ygzLy9YhVAdI"
+            />-->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDBM25Upmy9HEfk9zO0l-kX4gVLRg-5K8Y"
+            />
+        <activity android:name=".salon.MainMapSalon">
+
+        </activity>
+        <!--end-->
+
+        <!--pull to refresh-->
+        <activity android:name=".pulltorefresh.MainPullToRefresh">
+
+        </activity>
+        <!--end-->
+        <service android:name=".FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
     <permission android:name="android.permission.INTERNET"></permission>
@@ -116,5 +155,10 @@
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
 
-
+    <!--api map-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.
+   READ_GSERVICES" />
+    <!--end-->
 </manifest>

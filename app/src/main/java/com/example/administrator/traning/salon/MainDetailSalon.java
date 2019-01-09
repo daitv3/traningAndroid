@@ -10,10 +10,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.traning.R;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
-public class MainDetailSalon extends AppCompatActivity {
+public class MainDetailSalon extends AppCompatActivity implements OnMapReadyCallback {
     ImageView img_dt_salon;
     TextView tv_name;
     TextView tv_phone;
@@ -25,8 +31,10 @@ public class MainDetailSalon extends AppCompatActivity {
     ListItemServiceSalon listItemServiceSalon;
     RecyclerView recyclerView;
 
+    private GoogleMap mMap;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_deltail_salon);
         img_dt_salon = (ImageView) findViewById(R.id.detail_img_salon);
@@ -47,11 +55,14 @@ public class MainDetailSalon extends AppCompatActivity {
             tv_open_hours.setText(salon.getOpeningHours());
             tv_description.setText(salon.getDescription());
             StringBuffer stringBuffer = new StringBuffer();
-            for(int i = 0;i<salon.getRelationships().getServices().size();i++){
+            /*for(int i = 0;i<salon.getRelationships().getServices().size();i++){
 
                 stringBuffer.append(salon.getRelationships().getServices().get(i).getName());
                 stringBuffer.append("___");
-            }
+            }*/
+
+
+
             //tv_sv_name_salon.setText(stringBuffer.toString());
             listItemServiceSalon = new ListItemServiceSalon(salon.getRelationships(),MainDetailSalon.this);
             recyclerView = (RecyclerView) findViewById(R.id.detail_service_list);
@@ -59,6 +70,12 @@ public class MainDetailSalon extends AppCompatActivity {
 
             recyclerView.setAdapter(listItemServiceSalon);
         }
+
+        //call api gg map
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
     }
 
     private void getImg(ImageView img, String url){
@@ -67,5 +84,15 @@ public class MainDetailSalon extends AppCompatActivity {
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_foreground)
                 .into(img);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney, Australia, and move the camera.
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }

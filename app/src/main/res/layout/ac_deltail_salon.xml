@@ -20,47 +20,60 @@
 
                 <ImageView
                     android:id="@+id/detail_img_salon"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="300dp" />
 
                 <TextView
                     android:id="@+id/detail_name_salon"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="name" />
+                    android:text="name"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="17dp"
+                    />
 
                 <TextView
                     android:id="@+id/detail_phone"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="phone" />
+                    android:text="phone"
+                    android:layout_marginLeft="15dp"/>
 
                 <TextView
                     android:id="@+id/detail_address"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="address" />
+                    android:text="address"
+                    android:layout_marginLeft="15dp"/>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Openning hours:" />
+                        android:text="Opening hours:"
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:id="@+id/detail_opening_hours"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="12PM" />
+                        android:text="12PM"
+                        android:layout_marginLeft="28dp"/>
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/detail_btn_book_now"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Book Now"
+                    android:textColor="@color/ffffff"
+                    android:background="@color/f42f442"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -70,17 +83,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="About Salon" />
+                        android:text="About Salon"
+                        android:layout_marginLeft="15dp"/>
 
                     <TextView
                         android:id="@+id/detail_description"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"/>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -88,14 +103,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pricing table"
-                    android:id="@+id/list_service_name_salon"/>
+                    android:id="@+id/list_service_name_salon"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/detail_service_list"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    >
 
                 </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:map="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

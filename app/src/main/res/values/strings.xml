@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Danh Sách Nhân Viên</string>
-
+    <string name="app_name">List Staff</string>
+    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <string name="salon_btn_login">Login</string>
+    <!--change language-->
+    <string name="change_language_title">Language</string>
 </resources>
