@@ -16,7 +16,7 @@ public class Fragment_BanHang extends Fragment {
     Button dau_noi_sim;
     Button calib_nhien_lieu;
     Button update_info;
-
+    OnClickButtonFn onClickButtonFn;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,10 +36,14 @@ public class Fragment_BanHang extends Fragment {
         update_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                onClickButtonFn.onCLickButton();
             }
         });
 
         return itemView;
+    }
+
+    interface OnClickButtonFn{
+        void onCLickButton();
     }
 }

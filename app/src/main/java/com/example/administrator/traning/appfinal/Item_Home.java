@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.administrator.traning.R;
 
@@ -16,7 +17,7 @@ public class Item_Home  extends RecyclerView.Adapter<Item_Home.MyViewHolder>{
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
 //        LayoutInflater inflater  = (LayoutInflater) contextName.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.item_fn_home, viewGroup, false);
+        View view = inflater.inflate(R.layout.item_user_info, viewGroup, false);
 
         return new MyViewHolder(view);
     }
@@ -37,11 +38,14 @@ public class Item_Home  extends RecyclerView.Adapter<Item_Home.MyViewHolder>{
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-
+        TextView userName;
+        TextView email;
 
 
         public MyViewHolder( View itemView) {
             super(itemView);
+            userName = (TextView) itemView.findViewById(R.id.fn_info_user_name);
+            email = (TextView) itemView.findViewById(R.id.fn_info_email);
 
 
 
