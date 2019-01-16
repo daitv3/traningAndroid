@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.administrator.traning.R;
 
@@ -38,18 +37,12 @@ public class Item_Home  extends RecyclerView.Adapter<Item_Home.MyViewHolder>{
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-        Button dau_noi;
-        Button dau_noi_sim;
-        Button calib_nhien_lieu;
-        Button update_info;
+
 
 
         public MyViewHolder( View itemView) {
             super(itemView);
-            dau_noi = (Button) itemView.findViewById(R.id.fn_dau_noi);
-            dau_noi_sim = (Button) itemView.findViewById(R.id.fn_dau_noi_sim);
-            calib_nhien_lieu = (Button) itemView.findViewById(R.id.fn_ho_tro);
-            update_info = (Button) itemView.findViewById(R.id.fn_update_info);
+
 
 
         }
