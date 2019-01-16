@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/fe6e6e6"
+    android:layout_marginBottom="10dp"
+    android:gravity="top">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/fn_dau_noi"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/ffffff"
+
+            android:drawableTop="@drawable/shape12"
+            android:paddingTop="25dp"
+            android:text="Đầu nối thiết bị" />
+
+        <Button
+            android:id="@+id/fn_update_info"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/ffffff"
+
+            android:drawableTop="@drawable/fuel"
+            android:paddingTop="25dp"
+            tools:text="Calib nhiên liệu" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/fn_dau_noi_sim"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/ffffff"
+
+            android:drawableTop="@drawable/usbcable"
+            android:paddingTop="25dp"
+            android:text="Đầu nối thiết bị" />
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/ffffff"
+            android:id="@+id/fn_ho_tro"
+            android:drawableTop="@drawable/shape5"
+            android:paddingTop="25dp"
+            android:gravity="center"
+            android:text="Cập nhật thông tin" />
+    </LinearLayout>
+</LinearLayout>

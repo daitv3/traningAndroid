@@ -6,7 +6,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -14,11 +14,7 @@
         >
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".listView.ListViewDemo">
 
@@ -143,6 +139,22 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
+
+        <!--app final-->
+        <activity android:name=".appfinal.MainAppSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".appfinal.Main_Fn_Login">
+
+        </activity>
+        <activity android:name=".appfinal.Main_fn_Home"/>
+        <!--end-->
+
     </application>
 
     <permission android:name="android.permission.INTERNET"></permission>

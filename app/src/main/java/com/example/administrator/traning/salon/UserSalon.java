@@ -9,7 +9,10 @@ public class UserSalon {
     private String gender;
     private String token;
     private String message;
+
+
     public UserSalon(){}
+
 
     public UserSalon(String first_name, String last_name, String email, String pass, String phone_number, String gender) {
         this.first_name = first_name;
@@ -24,6 +27,9 @@ public class UserSalon {
         this.email = email;
         this.pass = pass;
     }
+
+
+
 
     public String getFirst_name() {
         return first_name;
