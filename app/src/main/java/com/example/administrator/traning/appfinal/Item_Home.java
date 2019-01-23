@@ -8,8 +8,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.administrator.traning.R;
+import com.example.administrator.traning.salon.Output_User;
 
 public class Item_Home  extends RecyclerView.Adapter<Item_Home.MyViewHolder>{
+    Output_User fn_userInfo;
+
+    public Item_Home(Output_User fn_userInfo) {
+        this.fn_userInfo = fn_userInfo;
+    }
+
+    public Item_Home(){};
 
 
     @NonNull
@@ -24,11 +32,15 @@ public class Item_Home  extends RecyclerView.Adapter<Item_Home.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-
+        myViewHolder.email.setText(fn_userInfo.getListUsers().getLstUsers().get(i).getEmail());
+        myViewHolder.userName.setText(fn_userInfo.getListUsers().getLstUsers().get(i).getUserName());
     }
 
     @Override
     public int getItemCount() {
+        if(fn_userInfo != null)
+            return fn_userInfo.getListUsers().getLstUsers().size();
+
         return 0;
     }
 

@@ -153,6 +153,7 @@
 
         </activity>
         <activity android:name=".appfinal.Main_fn_Home"/>
+        <activity android:name=".appfinal.Ac_Update_Info"/>
         <!--end-->
 
     </application>

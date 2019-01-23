@@ -1,5 +1,6 @@
 package com.example.administrator.traning.appfinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -14,11 +15,11 @@ import com.example.administrator.traning.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main_fn_Home extends AppCompatActivity {
+public class Main_fn_Home extends AppCompatActivity implements Fragment_BanHang.OnClickButtonFn{
     TabLayout tabLayout;
     ViewPager viewPager;
-
-
+    Fragment_BanHang fragment_banHang;
+    public static String Token = null;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,13 @@ public class Main_fn_Home extends AppCompatActivity {
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+        fragment_banHang = new Fragment_BanHang();
+        if(getIntent()!= null){
+            Token = getIntent().getStringExtra("token");
+        }
     }
+
+
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -48,6 +55,13 @@ public class Main_fn_Home extends AppCompatActivity {
         tabLayout.getTabAt(3).setIcon(R.drawable.customer_service);
 
     }
+
+    @Override
+    public void onCLickButton() {
+        Intent intent = new Intent(Main_fn_Home.this,Ac_Update_Info.class);
+         startActivity(intent);
+    }
+
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
 

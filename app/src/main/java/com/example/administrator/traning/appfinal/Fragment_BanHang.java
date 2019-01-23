@@ -1,5 +1,6 @@
 package com.example.administrator.traning.appfinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,6 +19,10 @@ public class Fragment_BanHang extends Fragment {
     Button update_info;
     OnClickButtonFn onClickButtonFn;
 
+
+
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,16 +32,20 @@ public class Fragment_BanHang extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
-         View itemView = inflater.inflate(R.layout.fragment_fn_banhang, null);
+        //View itemView = inflater.inflate(R.layout.fragment_fn_banhang, null);
+        View itemView = inflater.inflate(R.layout.fragment_fn_banhang,container, false);
         dau_noi = (Button) itemView.findViewById(R.id.fn_dau_noi);
         dau_noi_sim = (Button) itemView.findViewById(R.id.fn_dau_noi_sim);
         calib_nhien_lieu = (Button) itemView.findViewById(R.id.fn_ho_tro);
-        update_info = (Button) itemView.findViewById(R.id.fn_update_info);
+        update_info = (Button) itemView.findViewById(R.id.fn_update_info_12);
 
-        update_info.setOnClickListener(new View.OnClickListener() {
+        calib_nhien_lieu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickButtonFn.onCLickButton();
+               // onClickButtonFn.onCLickButton();
+               Intent intent = new Intent(getContext(),Ac_Update_Info.class);
+                startActivity(intent);
+
             }
         });
 

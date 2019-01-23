@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
+    android:id="@+id/id01"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,9 +10,11 @@
     android:background="@color/fe6e6e6"
     android:layout_marginBottom="10dp"
     android:gravity="top">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:gravity="center">
 
         <Button
@@ -28,16 +31,15 @@
             android:text="Đầu nối thiết bị" />
 
         <Button
-            android:id="@+id/fn_update_info"
+            android:id="@+id/fn_update_info_12"
             android:layout_width="170dp"
             android:layout_height="130dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
             android:background="@color/ffffff"
-
             android:drawableTop="@drawable/fuel"
             android:paddingTop="25dp"
-            tools:text="Calib nhiên liệu" />
+            tools:text="nhiên liệu" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

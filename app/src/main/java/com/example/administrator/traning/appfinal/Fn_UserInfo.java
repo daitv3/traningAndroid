@@ -22,6 +22,9 @@ public class Fn_UserInfo {
     private String ClientVersion;
     private String Password;
 
+
+
+
     public Fn_UserInfo(String amCode, String email, String fullname, float groupID, float isGroupRoot, float isNewTenant, float isSupper, float managementId, float parentId, float tenantId, String timeZone, float type, float userID, String userPhoneNumber, float userType, String username, float isNew) {
         AmCode = amCode;
         Email = email;
