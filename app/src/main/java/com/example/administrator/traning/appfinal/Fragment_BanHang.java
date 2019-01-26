@@ -1,6 +1,6 @@
 package com.example.administrator.traning.appfinal;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,6 +20,7 @@ public class Fragment_BanHang extends Fragment {
     OnClickButtonFn onClickButtonFn;
 
 
+    Context context;
 
 
 
@@ -42,9 +43,14 @@ public class Fragment_BanHang extends Fragment {
         calib_nhien_lieu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // onClickButtonFn.onCLickButton();
-               Intent intent = new Intent(getContext(),Ac_Update_Info.class);
-                startActivity(intent);
+
+                onClickButtonFn.onCLickButton();
+
+//                Intent intent = new Intent(getContext(),Main_fn_Home.class);
+//               startActivity(intent);
+
+
+
 
             }
         });

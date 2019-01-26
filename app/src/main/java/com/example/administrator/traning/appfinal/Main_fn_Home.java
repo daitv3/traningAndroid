@@ -1,6 +1,5 @@
 package com.example.administrator.traning.appfinal;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -33,6 +32,7 @@ public class Main_fn_Home extends AppCompatActivity implements Fragment_BanHang.
         if(getIntent()!= null){
             Token = getIntent().getStringExtra("token");
         }
+
     }
 
 
@@ -58,8 +58,9 @@ public class Main_fn_Home extends AppCompatActivity implements Fragment_BanHang.
 
     @Override
     public void onCLickButton() {
-        Intent intent = new Intent(Main_fn_Home.this,Ac_Update_Info.class);
-         startActivity(intent);
+
+        TabLayout.Tab tab = tabLayout.getTabAt(1);
+        tab.select();
     }
 
 

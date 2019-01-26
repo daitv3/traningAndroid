@@ -38,9 +38,12 @@ public class Item_Home  extends RecyclerView.Adapter<Item_Home.MyViewHolder>{
 
     @Override
     public int getItemCount() {
-        if(fn_userInfo != null)
-            return fn_userInfo.getListUsers().getLstUsers().size();
+        try {
+            if (fn_userInfo != null)
+                return fn_userInfo.getListUsers().getLstUsers().size();
+        }catch (Exception e){
 
+        }
         return 0;
     }
 
